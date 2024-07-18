@@ -1,0 +1,1 @@
+En este proyecto se desarrollará un encriptador de palabras. El usuario podrá enviar una frase o una palabra, y las vocales de estas serán reemplazadas por otros significados, lo que dará la posibilidad de encriptar un texto.
