@@ -2,13 +2,12 @@
 
 
 :root {
-    --color-primaria: #000000;
-    --color-secundaria: #F6F6F6;
-    --color-terciaria: #22D4FD;
+    --color-primaria: #F3F5FC;
+    --color-secundaria: #504e4e40;
+    --color-terciaria: #0A3871
+    ;
     --color-hover: #272727;
 
-    --fuente-krona: 'Krona One', sans-serif;
-    --fuente-montserrat: 'Montserrat', sans-serif;
 }
 
 * {
@@ -29,6 +28,7 @@ body{
 .header__menu{
     display: flex;
     gap: 80px;
+    color: var(--color-terciaria);
 }
 .header__menu__link{
     font-family: var(--fuente-montserrat);
@@ -61,6 +61,32 @@ body{
     font-family: var(--fuente-krona);
 }
 
+.presentacion__contenido__titulo textarea {
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%; /* 1.5 es equivalente a 150% */
+    /* identical to box height, or 48px */
+
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+    background-color: transparent; /* Hace el fondo del textarea transparente */
+    border: none; /* Quita el borde para una apariencia más limpia */
+    resize: none; /* Evita que el textarea sea redimensionable */
+    overflow: hidden; /* Esconde el scrollbar cuando no es necesario */
+}
+.presentacion__text_user_area::placeholder {
+    color: #0A3871; /* Asegura que el color del placeholder sea el mismo que el color del texto */
+    opacity: 1; /* Asegura que el placeholder no sea transparente */
+}
+
 .titulo-destaque {
     color: var(--color-terciaria); ;
 }
@@ -70,12 +96,11 @@ body{
     font-family: var(--fuente-montserrat);
 }
 
-.presentacion__enlaces{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
+.presentacion__botones{
+    display: flex; /* Usa flexbox para alinear los botones en una fila */
+    align-items: center; /* Centra los botones verticalmente en el contenedor */
+    gap: 50px; /* Espacio entre los botones */
+    margin-top: 65%;
 }
 
 .presentacion__enlaces__subtitulo{
@@ -83,24 +108,28 @@ body{
     font-weight: 400;
     font-size: 1.5rem;
 }
-.presentacion__enlaces__link{
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      border: 2px solid var(--color-terciaria);
-      width: 50%;
-      text-align: center;
-      border-radius: 8px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      padding: 21.5px 0;
-      text-decoration: none;
-      color: var(--color-secundaria);
-      font-family: var(--fuente-montserrat);
+
+.presentacion__enlaces__encriptador{
+    
+    background-color: #0A3871; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+
 }
 
-.presentacion__enlaces__link:hover{
-    background-color: var(--color-hover);
+.presentacion__enlaces__desencriptador{
+    background-color:#D8DFE8;
+    color:#0A3871 ; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+
 }
 
 .presentacion__imagen{
@@ -116,6 +145,39 @@ body{
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+.rectangulo {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 1000px;
+    top: 40px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+}
+
+.presentacion__imagen {
+    width: 100%; /* Asegúrate de que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.presentacion__texto {
+   
+    font-family: var(--fuente-krona);
+    font-size: 25px;  /*Ajusta el tamaño de la fuente según sea necesario */
+    color: #0A3871;
+    text-align: center; /* Centra el texto */
+}
+
 
 @media (max-width: 1200px) {
 
@@ -134,5 +196,7 @@ body{
     .presentacion__contenido{
         width: auto;
     }
+
+    
     
 }

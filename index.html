@@ -6,47 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="script.js"></script> 
 
 </head>
 <body>
     <header class="header">
         <nav class="header__menu">
-            
+            <h1>Encriptador de palabras desafío Alura</h1>
         </nav>
     </header>
     <main class="presentacion">
         <section class="presentacion__contenido">
             <h1 class="presentacion__contenido__titulo">
-                Eleve tu negocio digital a otro nivel 
-                <strong class="titulo-destaque">con un Front-end de calidad!
-                </strong></h1>
-                <p class="presentacion__contenido__texto">¡Hola! Soy Ana García, desarrolladora Front-end con
-                    especialización en React, HTML y CSS. Ayudo a pequeños
-                    negocios y diseñadores a llevar a cabo buenas ideas.
-                    ¿Hablamos?
+                <textarea name="texto_usuario" id="text_user" class="presentacion__text_user_area" oninput="adjustTextarea(this)" placeholder="Ingrese el texto aquí" maxlength="450"></textarea>
 
-                </p>
-                <div class="presentacion__enlaces">
-                    <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes</h2>
-                    <a class="presentacion__enlaces__link" href="https://github.com/">
-                        <img src="./assets/github.png">
-                        Github
-                    </a>
-                    <a class="presentacion__enlaces__link" href="https://linkedin.com/in/">
-                        <img src="./assets/linkedin.png">
-                        Linkedin
-                    </a>
-                    <a class="presentacion__enlaces__link" href="https://twitch.tv/">
-                        <img src="./assets/twitch.png">
-                        Twitch
-                    </a>
+                </h1>
+               
+                <div class="presentacion__botones">
+                   
+                    <button class="presentacion__enlaces__encriptador">Encriptar</button>
+                    <button class="presentacion__enlaces__desencriptador">Desencriptar</button>
                 </div>
                
         </section>
-            <img class="presentacion__imagen" src="./assets/Imagen.png" alt="Foto de Ana García desarrolando un proyecto">
+            <div class="rectangulo">
+                <img class="presentacion__imagen" src="./assets/Muñeco.png" alt="Foto de Ana García desarrolando un proyecto">
+                <p class="presentacion__texto" >Texto que va a cambiar</p>
+            </div>
+        
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
         <p>Desarrollado por Alura Latam</p>
-    </footer>
+    </footer>-->
 </body>
 </html>
