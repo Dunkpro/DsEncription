@@ -132,6 +132,19 @@ body{
 
 }
 
+.presentacion__enlaces__copiar{
+
+    background-color: #0A3871; /* Color de fondo del botón */
+    color: #FFFFFF; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 90%;
+
+}
+
 .presentacion__imagen{
     width: 50%;
 }
