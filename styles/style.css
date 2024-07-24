@@ -1,45 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
-
-
+/*Desarrollado por Carlos Jimenez, Contacto +56984318381*/
 :root {
     --color-primaria: #F3F5FC;
     --color-secundaria: #504e4e40;
-    --color-terciaria: #0A3871
-    ;
+    --color-terciaria: #0A3871;
     --color-hover: #272727;
-
 }
 
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 
-body{
+body {
     box-sizing: border-box;
     background-color: var(--color-primaria);
     color: var(--color-secundaria);
 }
 
-.header{
-    padding: 2% 0% 0% 15%;
+.header {
+    padding: 2% 0 0 15%;
 }
 
-.header__menu{
+.header__menu {
     display: flex;
     gap: 80px;
     color: var(--color-terciaria);
 }
-.header__menu__link{
+
+.header__menu__link {
     font-family: var(--fuente-montserrat);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-terciaria);
     text-decoration: none;
-
 }
-
-
 
 .presentacion {
     padding: 5% 15%;
@@ -48,109 +42,83 @@ body{
     justify-content: space-between;
 }
 
-.presentacion__contenido{
+.presentacion__contenido {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-
-.presentacion__contenido__titulo{
+.presentacion__contenido__titulo {
     font-size: 2rem;
     font-family: var(--fuente-krona);
 }
 
 .presentacion__contenido__titulo textarea {
-    position: absolute;
-    width: 577px;
+    width: 100%;
     height: 48px;
-    left: 240px;
-    top: 168px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
-    line-height: 150%; /* 1.5 es equivalente a 150% */
-    /* identical to box height, or 48px */
-
-    /* Dark blue/dark-blue-300 */
+    line-height: 150%;
     color: #0A3871;
-    background-color: transparent; /* Hace el fondo del textarea transparente */
-    border: none; /* Quita el borde para una apariencia más limpia */
-    resize: none; /* Evita que el textarea sea redimensionable */
-    overflow: hidden; /* Esconde el scrollbar cuando no es necesario */
+    background-color: transparent;
+    border: none;
+    resize: none;
+    overflow: hidden;
 }
+
 .presentacion__text_user_area::placeholder {
-    color: #0A3871; /* Asegura que el color del placeholder sea el mismo que el color del texto */
-    opacity: 1; /* Asegura que el placeholder no sea transparente */
+    color: #0A3871;
+    opacity: 1;
 }
 
 .titulo-destaque {
-    color: var(--color-terciaria); ;
+    color: var(--color-terciaria);
 }
 
-.presentacion__contenido__texto{
+.presentacion__contenido__texto {
     font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
 }
 
-.presentacion__botones{
-    display: flex; /* Usa flexbox para alinear los botones en una fila */
-    align-items: center; /* Centra los botones verticalmente en el contenedor */
-    gap: 50px; /* Espacio entre los botones */
-    margin-top: 65%;
+.presentacion__botones {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
 }
 
-.presentacion__enlaces__subtitulo{
+.presentacion__enlaces__subtitulo {
     font-family: var(--fuente-krona);
     font-weight: 400;
     font-size: 1.5rem;
 }
 
-.presentacion__enlaces__encriptador{
-    
-    background-color: #0A3871; /* Color de fondo del botón */
-    color: #FFFFFF; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de la fuente */
-    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
-
+.presentacion__enlaces__encriptador,
+.presentacion__enlaces__desencriptador,
+.presentacion__enlaces__copiar {
+    background-color: #0A3871;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.presentacion__enlaces__desencriptador{
-    background-color:#D8DFE8;
-    color:#0A3871 ; /* Color de fondo del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de la fuente */
-    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
-
+.presentacion__enlaces__desencriptador {
+    background-color: #D8DFE8;
+    color: #0A3871;
 }
 
-.presentacion__enlaces__copiar{
-
-    background-color: #0A3871; /* Color de fondo del botón */
-    color: #FFFFFF; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de la fuente */
-    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-top: 90%;
-
-}
-
-.presentacion__imagen{
+.presentacion__imagen {
     width: 50%;
 }
 
-.footer{
-    color:var(--color-primaria);
+.footer {
+    color: var(--color-primaria);
     background-color: var(--color-terciaria);
     padding: 24px;
     text-align: center;
@@ -160,11 +128,11 @@ body{
 }
 
 .rectangulo {
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    left: 1000px;
-    top: 40px;
+    position: relative; /* Cambia de absolute a relative */
+    width: 100%; /* Ajusta el ancho al contenedor */
+    height: auto; /* Deja que la altura se ajuste automáticamente */
+    max-width: 400px; /* Establece un ancho máximo */
+    margin: 20px auto; /* Centra el rectángulo horizontalmente con margen arriba y abajo */
 
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -175,41 +143,140 @@ body{
     align-items: center;
     justify-content: flex-start;
     padding: 20px; /* Ajusta el padding según sea necesario */
+    overflow: hidden;
 }
 
 .presentacion__imagen {
-    width: 100%; /* Asegúrate de que la imagen se ajuste al ancho del contenedor */
-    height: auto; /* Mantén la proporción de la imagen */
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    font-family: var(--fuente-krona);
+    font-size: 25px;
+    color: #0A3871;
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+
+    overflow-wrap: break-word; /* Ajusta el texto largo dentro del contenedor */
+    word-wrap: break-word; /* Para compatibilidad con navegadores antiguos */
+    white-space: pre-wrap; /* Asegura que el texto largo se ajuste en el contenedor */
 }
 
 .presentacion__texto {
-   
     font-family: var(--fuente-krona);
-    font-size: 25px;  /*Ajusta el tamaño de la fuente según sea necesario */
+    font-size: 25px;
     color: #0A3871;
-    text-align: center; /* Centra el texto */
+    text-align: center;
 }
 
+/* Media queries para diferentes tamaños de pantalla */
 
-@media (max-width: 1200px) {
+/* Pantallas grandes (por ejemplo, 1440px x 1024px) */
+@media (max-width: 1440px) {
+    .header {
+        padding: 2% 5%;
+        align-items: center;
+        text-align: center;
+        margin-left: 30%;
+    }
 
-    .header{
-         padding: 10%;  
-    }
-    .header__menu{
-        justify-content: center;
-    }
-    .presentacion{
+    .presentacion {
         flex-direction: column-reverse;
         padding: 5%;
+        
+    }
+  
 
+    .presentacion__contenido {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        
+        
+    
     }
 
-    .presentacion__contenido{
-        width: auto;
+    .rectangulo {
+        width: 80%; /* Ajusta el ancho relativo */
+        max-width: 300px; /* Mantén el ancho máximo */
+        margin: 20px auto; /* Centra con margen arriba y abajo */
+        
+    }
+}
+
+/* Tablets (por ejemplo, 768px x 1174px) */
+@media (max-width: 768px) {
+    .header {
+        padding: 2% 5%;
+        align-items: center;
+        text-align: center;
+        margin-left: 5%;
     }
 
-    
-    
+    .header__menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .presentacion__contenido__titulo textarea {
+        width: 100%;
+    }
+
+    .rectangulo {
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+    }
+}
+
+/* Móviles (por ejemplo, 375px x 933px) */
+@media (max-width: 375px) {
+    .header {
+        padding: 5%;
+        text-align: center;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.5rem;
+    }
+
+    .presentacion__contenido__titulo textarea {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .presentacion__botones {
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .rectangulo {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
 }
